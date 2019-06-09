@@ -7,7 +7,7 @@
   "scripts": {
     "test": "cross-env DEBUG=dev NODE_ENV=test jest --detectOpenHandles --forceExit --coverage",
     "dev": "cross-env DEBUG=dev NODE_ENV=test nodemon --exec node -r esm server/app.js",
-    "coverage":"jest --coverage --detectOpenHandles --forceExit && cat ./coverage/lcov.info | coveralls"
+    "coverage":"cross-env NODE_ENV=test jest --detectOpenHandles --forceExit --coverage --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
