@@ -7,7 +7,7 @@
   "scripts": {
     "test": "cross-env DEBUG=dev NODE_ENV=test jest --detectOpenHandles --forceExit --coverage",
     "dev": "cross-env DEBUG=dev NODE_ENV=test nodemon --exec node -r esm server/app.js",
-    "coverage":"cross-env NODE_ENV=test jest --detectOpenHandles --forceExit --coverage --coverageReporters=text-lcov | coveralls"
+    "coverage": "cross-env NODE_ENV=test jest --detectOpenHandles --forceExit --coverage --coverageReporters=text-lcov | coveralls"
   },
   "repository": {
     "type": "git",
@@ -32,7 +32,8 @@
     "debug": "^4.1.1",
     "dotenv": "^8.0.0",
     "express": "^4.17.1",
-    "esm": "^3.2.25"
+    "esm": "^3.2.25",
+    "firebase": "latest"
   },
   "devDependencies": {
     "coveralls": "^3.0.4",
